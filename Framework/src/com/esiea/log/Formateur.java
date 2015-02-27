@@ -28,7 +28,7 @@ public class Formateur {
 		}
 		
 		String customFormatMessage = "";
-		customFormatMessage = pattern.replaceAll("\\%\\(acstime\\)\\%", date.format(new Date()));
+		customFormatMessage = pattern.replaceAll("\\%\\(date\\)\\%", date.format(new Date()));
 		customFormatMessage = customFormatMessage.replaceAll("\\%\\(loggerName\\)\\%", loggerName.getName());
 		customFormatMessage = customFormatMessage.replaceAll("\\%\\(levelVal\\)\\%", Integer.toString(msgLevel.getLevelValue()));
 		customFormatMessage = customFormatMessage.replaceAll("\\%\\(levelName\\)\\%", msgLevel.name());

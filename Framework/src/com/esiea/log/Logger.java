@@ -2,6 +2,8 @@ package com.esiea.log;
 
 import java.util.ArrayList;
 import java.util.Properties;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 
 
@@ -54,7 +56,7 @@ public class Logger {
 		}
 		
 		if(listCibles.size() == 0) {
-			System.out.println("\n Veuillez renseigner la cible avec logger.addHandler(new NameCible()\n");
+			listCibles.add(new ConsoleCible());
 
 		}
 		
@@ -95,11 +97,14 @@ public class Logger {
 	}
 	
 	private void handleProperties() {
-			
+		FileInputStream input = null;
+
 		Properties properties = new Properties();
 
 		try {
-				
+			input = new FileInputStream(new File("logging.properties"));
+			
+			
 				//Level
 				if(properties.getProperty("logger.level").equals("DEBUG")) {
 					level = logLevel.DEBUG;
@@ -132,9 +137,20 @@ public class Logger {
 					}
 				
 				}
+				
+				
 		} catch (IOException ex) {
 			ex.printStackTrace();
+		} finally {
+			if (input != null) {
+				try {
+					input.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+	}
 		}
+		
 	}
 }
 		

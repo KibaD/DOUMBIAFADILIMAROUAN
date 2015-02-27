@@ -28,11 +28,11 @@ public class Formateur {
 		}
 		
 		String customFormatMessage = "";
-		customFormatMessage = pattern.replaceAll("\\%\\(date\\)\\%", date.format(new Date()));
-		customFormatMessage = customFormatMessage.replaceAll("\\%\\(loggerName\\)\\%", loggerName.getName());
-		customFormatMessage = customFormatMessage.replaceAll("\\%\\(levelVal\\)\\%", Integer.toString(msgLevel.getLevelValue()));
-		customFormatMessage = customFormatMessage.replaceAll("\\%\\(levelName\\)\\%", msgLevel.name());
-		customFormatMessage = customFormatMessage.replaceAll("\\%\\(message\\)\\%", msg);
+		customFormatMessage = pattern.replaceAll("%date%", date.format(new Date()));
+		customFormatMessage = customFormatMessage.replaceAll("%loggerName%", loggerName.getName());
+		customFormatMessage = customFormatMessage.replaceAll("%levelVal%", Integer.toString(msgLevel.getLevelValue()));
+		customFormatMessage = customFormatMessage.replaceAll("%levelName%", msgLevel.name());
+		customFormatMessage = customFormatMessage.replaceAll("%message%", msg);
 		
 		return customFormatMessage;
 	}

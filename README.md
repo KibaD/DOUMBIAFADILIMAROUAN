@@ -18,5 +18,5 @@ Rentrons dans l'aspect pratique:
 
 
 La difficulté dans ce projet pour mon groupe a été le respect de l'OCP qui s'est fait au
-détriment de nombreuses fonctionnalités.
+détriment de nombreuses fonctionnalitées.
 

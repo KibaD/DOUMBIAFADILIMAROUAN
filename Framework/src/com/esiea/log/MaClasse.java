@@ -12,9 +12,9 @@ public class MaClasse {
 		Logger logger = new Logger(MaClasse.class);
 		
 		logger.setLevel(logLevel.DEBUG);
-		//logger.setLevel(Level.INFO);
-		//logger.setLevel(Level.ERROR);
-		//logger.setLevel(Level.WARN);
+		//logger.setLevel(logLevel.INFO);
+		//logger.setLevel(logLevel.ERROR);
+		//logger.setLevel(logLevel.WARN);
 
 		logger.setFormateur(new Formateur("Date: %(date)% - [NAME=%(loggerName)% LEVEL_VAL=%(levelVal)% LEVEL_NAME=%(levelName)% MESSAGE= %(message)%]"));
      	//logger.setFormateur(new Formateur());
